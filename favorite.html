@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/styleFavoritePage.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"
+    />
+    <title>Your Favorite Art</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Libre+Baskerville:wght@400;700&family=Lobster+Two:ital,wght@1,700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="headerBackground">
+      <div class="frame brackets">
+        <h1 id="headerFP" class="header">Favorites and Inspiration</h1>
+      </div>
+    </div>
+    <nav id="navFP" class="nav">
+      <a class="homeLink" href="./index.html">Home Page</a>
+    </nav>
+    <div id="displaySection" class="display">
+      <div id="dispFavContainer" class="dispFavContainer"></div>
+      <div id="wordCloudContainer" class="wordCloudContainer">
+        <p id="wordCloudDescription" class="wordCloudDescription">
+          Both the words and colors in this inspiration cloud are generated
+          based on your favorite pieces of art!
+        </p>
+        <label>
+          <input type="checkbox" id="darkMode" class="darkMode" />
+          Toggle Background Color
+        </label>
+        <img id="wordCloudImage" class="wordCloudImage" />
+        <button id="wordCloudBtnFP" class="button">
+          Click for Inspiration
+        </button>
+        <div id="loader" class="loaderWordCloud hidden">
+          <div class="lds-ring">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="modal" class="modal">
+      <div class="modal-background"></div>
+      <div class="modal-content">
+        <p class="image is-6by5">
+          <img
+            id="modalImage"
+            src="https://bulma.io/images/placeholders/1280x960.png"
+            alt=""
+          />
+        </p>
+      </div>
+      <button
+        id="closeModal"
+        class="modal-close is-large"
+        aria-label="close"
+      ></button>
+    </div>
+    <footer>
+      <p>Bootcamp Project #1 - Created by David, Travis, and Archer - 2023</p>
+      <p>All images sourced from the Art Institute of Chicago</p>
+    </footer>
+    <script src="./assets/favorite-page.js"></script>
+  </body>
+</html>

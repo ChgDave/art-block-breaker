@@ -1,0 +1,247 @@
+body {
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  background-color: #222;
+  color: #fff;
+  padding: 20px;
+}
+
+.header1 {
+  margin: 20px 20px;
+  height: 75px;
+  width: 400px;
+  font-family: "Lobster Two", cursive;
+  font-weight: 700;
+  font-size: 55px;
+}
+
+.navSection {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 5px;
+  border: 3px solid black;
+  background-color: lightgray;
+  padding-top: 0.5%;
+  padding-bottom: 0.5%;
+  font-size: 25px;
+}
+
+.favLink {
+  background-color: white;
+  color: black;
+  border: 3px solid black;
+  padding: 4px 14px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  border: 1px solid black;
+}
+
+.favLink:hover {
+  background-color: black;
+  color: white;
+  padding: 4px 14px;
+  border: 1px solid white;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.button {
+  cursor: pointer;
+  padding: 5px 8px;
+  font-size: medium;
+}
+
+.searchInput {
+  padding: 7px;
+  font-size: 15px;
+  margin-right: 5px;
+}
+
+.searchInput:focus {
+  color: black;
+  border: 4px solid white;
+}
+
+.displayContainer {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  border: 1px solid black;
+}
+
+.mainImage {
+  height: 100vh;
+  width: 100vw;
+}
+
+.displayCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 45%;
+  margin: 10px;
+  --s: 10px; /*control the size*/
+  padding: 7px;
+  border: calc(2 * var(--s)) solid #0000;
+  outline: 2px solid #000;
+  outline-offset: calc(-1 * var(--s));
+  background: conic-gradient(from 90deg at 2px 2px, #0000 25%, #000 0);
+}
+
+.cardImage {
+  display: flex;
+  width: 100%;
+  margin-top: 10px;
+  flex-direction: column;
+  align-items: center;
+}
+
+.description {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.artInfo {
+  margin: 5%;
+  text-align: center;
+  font-family: "Libre Baskerville", serif;
+}
+
+.artName {
+  font-family: "Libre Baskerville", serif;
+}
+
+.favoriteButton {
+  margin-top: 3%;
+}
+
+.artistName {
+  font-family: "Libre Baskerville", serif;
+  font-weight: bold;
+  font-style: italic;
+}
+
+.searchResultImage {
+  height: auto;
+  width: 95%;
+}
+
+/* styling for application title frame */
+.frame {
+  --corner: 1em;
+  --bg: rgb(0, 145, 255);
+}
+
+.disco {
+  border: var(--corner) solid;
+  border-image-source: radial-gradient(
+    closest-side,
+    transparent 10%,
+    red 10%,
+    orange 20%,
+    transparent 20%,
+    transparent 30%,
+    yellow 30%,
+    var(--bg) 40%,
+    transparent 40%,
+    transparent 50%,
+    green 50%,
+    rgb(32, 199, 32) 60%,
+    transparent 60%,
+    transparent 70%,
+    var(--bg) 70%,
+    aqua 80%,
+    transparent 80%,
+    transparent 90%,
+    purple 99.99%,
+    var(--bg) 100%,
+    transparent 99.99%
+  );
+  border-image-slice: 49%;
+}
+
+.brackets {
+  border: 10px solid;
+  border-image-source: conic-gradient(
+    transparent 10%,
+    yellow 10%,
+    var(--bg) 40%,
+    transparent 40%,
+    transparent 60%,
+    red 60%,
+    var(--bg) 90%,
+    transparent 90%
+  );
+  /* browsers have different thresholds for this, Safari needs at least 0.1% */
+  border-image-slice: 0.1%;
+}
+
+footer {
+  font-family: "Libre Baskerville", serif;
+  font-size: smaller;
+  font-weight: lighter;
+  font-style: italic;
+  text-align: center;
+  background-color: #222;
+  color: #fff;
+  padding: 20px;
+}
+
+.btnColor {
+  background-color: rgb(117, 115, 115);
+}
+
+.loader {
+  display: flex;
+  justify-content: center;
+}
+
+.lds-ring {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+.lds-ring div {
+  box-sizing: border-box;
+  display: block;
+  position: absolute;
+  width: 64px;
+  height: 64px;
+  margin: 8px;
+  border: 8px solid #7d7a7a;
+  border-radius: 50%;
+  animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+  border-color: #7d7a7a transparent transparent transparent;
+}
+.lds-ring div:nth-child(1) {
+  animation-delay: -0.45s;
+}
+.lds-ring div:nth-child(2) {
+  animation-delay: -0.3s;
+}
+.lds-ring div:nth-child(3) {
+  animation-delay: -0.15s;
+}
+@keyframes lds-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.hidden {
+  display: none;
+}
